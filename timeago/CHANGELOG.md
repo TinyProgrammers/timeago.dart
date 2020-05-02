@@ -1,10 +1,31 @@
 # Changelog
 
+## 2.0.26
+- Added Catalan support @comlaterra
+
+## 2.0.25
+- Added dhivehi support @Dharisd
+
+## 2.0.24
+- Improvements in package health with pana.
+- Fixes to Kurdish messages.
+
+## 2.0.22
+- Improvements to Polish messages @Patryk27
+- Adds French short messages @woprandi
+
+## 2.0.21
+- Improvements to Zh messages @kj415j45
+- Adds Sv messages @simoneddeland
+
+## 2.0.20
+- Improvements to Es messages @anonymousJacker
+
 ## 2.0.19
 - Added Romanian support @stefancandrea
 - Added Italian short version  @quantosapplications
 - Improvements to Ja messages @kesoji
-- Improvements to brazilian portuguese  @elder004
+- Improvements to brazilian portuguese @elder004
 
 ## 2.0.18
 - Improvements to Ku messages thanks to @Xoshbin 

@@ -9,7 +9,12 @@ var locale = 'en';
 
 main() async {
   timeago.setLocaleMessages('de', timeago.DeMessages());
+  timeago.setLocaleMessages('dv', timeago.DvMessages());
+  timeago.setLocaleMessages('dv_short', timeago.DvShortMessages());
   timeago.setLocaleMessages('fr', timeago.FrMessages());
+  timeago.setLocaleMessages('fr_short', timeago.FrShortMessages());
+  timeago.setLocaleMessages('ca', timeago.CaMessages());
+  timeago.setLocaleMessages('ca_short', timeago.CaShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
   timeago.setLocaleMessages('km', timeago.KmMessages());
   timeago.setLocaleMessages('km_short', timeago.KmShortMessages());
@@ -40,6 +45,8 @@ main() async {
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('ro', timeago.RoMessages());
   timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
+  timeago.setLocaleMessages('sv', timeago.SvMessages());
+  timeago.setLocaleMessages('sv_short', timeago.SvShortMessages());
 
   final loadedTime = new DateTime.now();
 

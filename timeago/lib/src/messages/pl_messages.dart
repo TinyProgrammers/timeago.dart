@@ -1,25 +1,45 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 class PlMessages implements LookupMessages {
+  @override
   String prefixAgo() => '';
+  @override
   String prefixFromNow() => '';
+  @override
   String suffixAgo() => 'temu';
+  @override
   String suffixFromNow() => 'od tego momentu';
+  @override
   String lessThanOneMinute(int seconds) => 'chwilę';
+  @override
   String aboutAMinute(int minutes) => 'około minutę';
-  String minutes(int minutes) => _is234(minutes) ? '$minutes minuty' : '$minutes minut';
+  @override
+  String minutes(int minutes) => _pluralize(minutes, 'minuty', 'minut');
+  @override
   String aboutAnHour(int minutes) => 'około godzinę';
-  String hours(int hours) => _is234(hours) ? '$hours godziny' : '$hours godzin';
+  @override
+  String hours(int hours) => _pluralize(hours, 'godziny', 'godzin');
+  @override
   String aDay(int hours) => 'dzień';
+  @override
   String days(int days) => '$days dni';
+  @override
   String aboutAMonth(int days) => 'około miesiąc';
-  String months(int months) => _is234(months) ? '$months miesiące' : '$months miesięcy';
+  @override
+  String months(int months) => _pluralize(months, 'miesiące', 'miesięcy');
+  @override
   String aboutAYear(int year) => 'około rok';
-  String years(int years) => _is234(years) ? '$years lata' : '$years lat';
+  @override
+  String years(int years) => _pluralize(years, 'lata', 'lat');
+  @override
   String wordSeparator() => ' ';
-  
-  bool _is234(int v){
-    var mod = v % 10;
-    return (mod == 2 || mod == 3 || mod == 4) && (v / 10) != 1;
-  } 
+
+  String _pluralize(int n, String form1, String form2) {
+    // Rules as per https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
+    if (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) {
+      return '$n $form1';
+    }
+
+    return '$n $form2';
+  }
 }
